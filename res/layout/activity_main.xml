@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parentL"
+    tools:context=".MainActivity"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_school_24"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/icon"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Online Examination"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#670070"
+        android:textAlignment="center"
+        android:id="@+id/label_1"
+        android:layout_below="@id/icon"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in to continue"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/label_2"
+        android:layout_below="@id/label_1"
+        android:layout_above="@id/ll"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_margin="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uName"
+            android:inputType="text"
+            android:singleLine="true"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="password"
+            android:textAllCaps="true"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pass"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:layout_margin="5dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me"
+            android:textColor="@android:color/holo_green_dark"
+            android:id="@+id/rMe"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:textColor="@android:color/white"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:background="@drawable/round_border"
+            android:onClick="logInListener"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:onClick="forgotPassListener"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
